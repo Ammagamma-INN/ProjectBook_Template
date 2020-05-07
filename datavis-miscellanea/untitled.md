@@ -1,5 +1,5 @@
 ---
-description: '#plotly #heatmap'
+description: '#plotly #heatmap #confusionmatrix #correlationmatrix'
 ---
 
 # Plotly Heatmap function
