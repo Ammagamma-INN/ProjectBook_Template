@@ -32,5 +32,5 @@
 
 ## DATAVIS - MISCELLANEA
 
-* [Plotly Heatmap function](datavis-miscellanea/untitled.md)
+* [Plotly Heatmap function](datavis-miscellanea/plotly_heatmap_function.md)
 
