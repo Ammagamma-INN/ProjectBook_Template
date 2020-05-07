@@ -33,5 +33,5 @@
 ## DATAVIS - MISCELLANEA
 
 * [Plotly Heatmap function](datavis-miscellanea/plotly_heatmap_function.md)
-* [Plotly Confusion Matrix](datavis-miscellanea/plotly-confusion-matrix.md)
+* [Plotly Confusion Matrix](datavis-miscellanea/plotly_confusion_matrix.md)
 
