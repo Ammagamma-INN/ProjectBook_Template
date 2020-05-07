@@ -100,7 +100,7 @@ Let's see how the code is organized step but step.
   from sklearn.datasets import fetch_california_housing
   ```
 
-* Step 2
+* Step 2. Importing data from sklearn. We will use california housing dataset. We gather inputs and output into a unique DataFrame which will be used to test 
 
   ```python
   data = fetch_california_housing()
