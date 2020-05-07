@@ -8,7 +8,7 @@ description: '#plotly #heatmap'
 
 ## Output and Full Code​
 
-![](../.gitbook/assets/newplot.png)
+![](../.gitbook/assets/newplot%20%281%29.png)
 
 ```python
 import plotly.figure_factory as ff
@@ -54,10 +54,10 @@ def plot_heatmap(df_heatmap, title='Heatmap', xaxis_title='', yaxis_title='', n_
         colorscale = [[0, 'white'], [1, 'green']]
         font_colors = ['black', 'black']
     elif n_colors == 2:
-        colorscale = [[0, 'darkred'], [1, 'green']]
+        colorscale = [[0, 'lightblue'], [1, 'red']]
         font_colors = ['black', 'black']
     elif n_colors == 3:
-        colorscale = [[0, 'darkred'], [.5, 'white'], [1, 'green']]
+        colorscale = [[0, 'lightblue'], [.5, 'white'], [1, 'red']]
         font_colors = ['black', 'black', 'black']
     fig = ff.create_annotated_heatmap(np.round(df_heatmap.values[::-1],2), 
                                       x = list(df_heatmap.columns),
@@ -100,7 +100,7 @@ Let's see how the code is organized step but step.
   from sklearn.datasets import fetch_california_housing
   ```
 
-* Step 2. Importing data from sklearn. We will use california housing dataset. We gather inputs and output into a unique DataFrame which will be used to test 
+* Step 2. Importing data from sklearn. We will use california housing dataset. We gather inputs and output into a unique DataFrame which will be used to test the function.
 
   ```python
   data = fetch_california_housing()
@@ -110,25 +110,114 @@ Let's see how the code is organized step but step.
   df['Price'] = Y
   ```
 
-* Step 3
+* Step 3. Defining function and all its inputs, as specified in the description.
 
   ```python
-  print(x)
+  def plot_heatmap(df_heatmap, title='Heatmap', xaxis_title='', yaxis_title='', n_colors=1, figsize=500, filename=''):
+      """
+      Description
+
+      Parameters
+      ----------
+      df_heatmap : pandas DataFrame
+      title : string, default 'Heatmap'
+          Plot title
+      xaxis_title : string, default ''
+          Name of the x axis
+      yaxis_title : string, default ''
+          Name of the y axis
+      n_colors : {1, 2, 3}, default 1
+          Number of colors to use in the Heatmap
+      figsize : int, default 500
+          Dimension of the square image (figsize, figsize)
+      filename : string, default ''
+          Name of the filaname. If filename != '' then the image 
+          is saved with the filename specified. 
+          Supported formats:
+          - png (static image)
+          - html (interactive image)
+
+      Returns
+      -------
+      Plotly image
+      """
   ```
 
-* Step 4
+* Step 4. Setting colors number, colorscale \(= background color\) and font\_colors \(= color of the annotations for the Heatmap\).
 
   ```python
-  print(x)
+      if n_colors == 1:
+          colorscale = [[0, 'white'], [1, 'green']]
+          font_colors = ['black', 'black']
+      elif n_colors == 2:
+          colorscale = [[0, 'lightblue'], [1, 'red']]
+          font_colors = ['black', 'black']
+      elif n_colors == 3:
+          colorscale = [[0, 'lightblue'], [.5, 'white'], [1, 'red']]
+          font_colors = ['black', 'black', 'black']
   ```
 
-* Step 5
+* Step 5. Create the Heatmap. Please note that the numbers are rounded to the second decimal. The order of the rows is reversed by the command \[::-1\] due to Plotly default settings.
 
   ```python
-  print(x)
+      fig = ff.create_annotated_heatmap(np.round(df_heatmap.values[::-1],2), 
+                                        x = list(df_heatmap.columns),
+                                        y = list(df_heatmap.index)[::-1],
+                                        colorscale=colorscale, font_colors=font_colors)
+  ```
+
+* Step 6. Updating layout of the plot in terms of figure size \(squared: figsize x figsize\), plot title and axis titles.
+
+  ```python
+      fig.update_layout(
+          autosize=False,
+          width=figsize,
+          height=figsize,
+          title={'text':title,'x':.5,'y':.99},
+          xaxis_title=xaxis_title,
+          yaxis_title=yaxis_title,
+      )
+  ```
+
+* Step 7. If filename argument is passed, the plot will be saved either as an html page or png file \(depending on filename extension\).
+
+  ```python
+      if filename.endswith('.html'):
+          fig.write_html(filename)
+      elif filename.endswith('.png'):
+          fig.write_image(filename)
+  ```
+
+* Step 8. Show the figure created.
+
+  ```python
+      fig.show()
+  ```
+
+* Step 9. Use the function to plot the image shown above. In this case we plot the correlation matrix of the DataFrame using Pandas inner method and passing 'Plotly Heatmap!' string as plot title.
+
+  ```python
+  plot_heatmap(df.corr(), title='Plotly Heatmap!')
   ```
 
 ## Final thoughts / recommendation
+
+This function can be used for different purposes, like confusion matrix, correlations,  try different argument values to test it.
+
+Example, two colors correlation matrix:
+
+```python
+plot_heatmap(df.corr(), n_colors=2, title='Plotly Heatmap: 2 colors')
+```
+
+![](../.gitbook/assets/newplot-3.png)
+
+```python
+plot_heatmap(df.corr(), n_colors=3, title='Plotly Heatmap: 3 colors', 
+             xaxis_title='variabile_x', yaxis_title='variabile_y')
+```
+
+![](../.gitbook/assets/newplot-4.png)
 
 Use this at your own risk!
 
