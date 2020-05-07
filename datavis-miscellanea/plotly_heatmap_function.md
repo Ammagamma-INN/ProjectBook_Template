@@ -204,7 +204,11 @@ Let's see how the code is organized step but step.
 
 This function can be used for different purposes, like confusion matrix, correlations,  try different argument values to test it.
 
-Example, two colors correlation matrix:
+See also: 
+
+* [https://app.gitbook.com/@energyway/s/models-and-solutions-templates/datavis-miscellanea/plotly-confusion-matrix](https://app.gitbook.com/@energyway/s/models-and-solutions-templates/datavis-miscellanea/plotly-confusion-matrix)
+
+Example usage: two colors correlation matrix:
 
 ```python
 plot_heatmap(df.corr(), n_colors=2, title='Plotly Heatmap: 2 colors')
