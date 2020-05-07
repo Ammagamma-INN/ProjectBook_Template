@@ -1,6 +1,10 @@
+---
+description: '#plotly #confusionmatrix #classificationresults'
+---
+
 # Plotly Confusion Matrix
 
-‌Outline code main purpose.
+Example of usage of plot\_heatmap function \([https://app.gitbook.com/@energyway/s/models-and-solutions-templates/datavis-miscellanea/plotly\_heatmap\_function](https://app.gitbook.com/@energyway/s/models-and-solutions-templates/datavis-miscellanea/plotly_heatmap_function)\) to show a confusion matrix for a classification model.
 
 ## Output and Full Code​
 
