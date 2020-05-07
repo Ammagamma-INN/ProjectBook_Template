@@ -206,7 +206,7 @@ This function can be used for different purposes, like confusion matrix, correla
 
 See also: 
 
-* [https://app.gitbook.com/@energyway/s/models-and-solutions-templates/datavis-miscellanea/plotly-confusion-matrix](https://app.gitbook.com/@energyway/s/models-and-solutions-templates/datavis-miscellanea/plotly-confusion-matrix)
+* [https://app.gitbook.com/@energyway/s/models-and-solutions-templates/datavis-miscellanea/plotly\_confusion\_matrix](https://app.gitbook.com/@energyway/s/models-and-solutions-templates/~/drafts/-M6jaj-x4VLj1-jEAnxe/datavis-miscellanea/plotly_confusion_matrix)
 
 Example usage: two colors correlation matrix:
 
