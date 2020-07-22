@@ -1,37 +1,28 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [Overview di progetto](README.md)
 
-## ML - Regression
+## Project Book
 
-## ML - Classification
+* [Operative objectives](project-book/project-purpose-objectives-and-success-criteria.md)
+* [Roles and Responsibilities](project-book/roles-and-responsibilities.md)
+* [Gantt, Deliverables and Budget control](project-book/budget-control.md)
+* [Data project retrospective](project-book/project-close-out-plan.md)
+* [Riferimenti e contatti](project-book/riferimenti-e-collegamenti.md)
 
-## Clustering
+## PRODUZIONE
 
-## Time series
+* [Staging Layer](produzione/staging-layer.md)
+* [Transformation Layer](produzione/transformation-layer.md)
+* [Model Layer](produzione/model-layer.md)
+* [Presentation Layer](produzione/presentation-layer.md)
 
-## DL - Text
+## APPUNTI
 
-## DL - Images
+* [Appunti personali e prossimi passi](appunti/untitled.md)
+* [Definitions and Acronyms](appunti/definitions-and-acronyms.md)
 
-## DL - Audio
+## Documentazione
 
-## Model sensitivity
-
-## Optimization - Scheduling
-
-## RPA - web automation & scraping
-
-## RPA - Log implementation
-
-## WEB DEVELOPMENT - Dashboards
-
-## DATAVIS - Graphs <a id="data-vis-graphs"></a>
-
-* [PyVis physical graph](data-vis-graphs/untitled.md)
-
-## DATAVIS - MISCELLANEA
-
-* [Plotly Heatmap function](datavis-miscellanea/plotly_heatmap_function.md)
-* [Plotly Confusion Matrix](datavis-miscellanea/plotly_confusion_matrix.md)
+* [Documento di deploy](documentazione/documento-di-deploy.md)
 
